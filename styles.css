@@ -37,6 +37,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 a {
@@ -155,7 +156,7 @@ img {
 }
 
 .navbar.scrolled {
-    background: var(--white);
+    background: var(--primary-blue);
     box-shadow: var(--shadow-sm);
     padding: 8px 0;
 }
@@ -205,6 +206,7 @@ img {
 
 .navbar.scrolled .logo-text {
     font-size: 1.2rem;
+    color: var(--white);
 }
 
 .nav-menu {
@@ -217,8 +219,8 @@ img {
 }
 
 .navbar.scrolled .nav-menu {
-    background: transparent;
-    box-shadow: none;
+    background: rgba(0, 102, 179, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .nav-menu a {
@@ -230,7 +232,7 @@ img {
 }
 
 .navbar.scrolled .nav-menu a {
-    color: var(--dark);
+    color: var(--white);
 }
 
 .nav-menu a:hover {
@@ -273,7 +275,7 @@ img {
 }
 
 .navbar.scrolled .nav-toggle span {
-    background: var(--dark);
+    background: var(--white);
 }
 
 /* ===== Hero Section ===== */
@@ -1262,7 +1264,12 @@ img {
 
     .scroll-left,
     .scroll-right {
-        display: none;
+        width: 40px;
+        height: 40px;
+    }
+
+    .latest-work-scroller {
+        gap: 10px;
     }
 
     .contact-content {
@@ -1282,20 +1289,25 @@ img {
 
     .navbar {
         top: 35px;
-        background: transparent;
+        background: var(--primary-blue);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     .navbar.scrolled {
-        background: var(--white);
+        background: var(--primary-blue);
     }
 
     .logo {
         padding: 8px 15px;
-        background: rgba(255, 255, 255, 0.95);
+        background: transparent;
     }
 
     .navbar.scrolled .logo {
         background: transparent;
+    }
+    
+    .logo-text {
+        color: var(--white);
     }
 
     .logo-icon {
@@ -1319,8 +1331,9 @@ img {
         gap: 30px;
         padding: 0;
         border-radius: 0;
-        box-shadow: none;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
         transition: var(--transition);
+        z-index: 1000;
     }
 
     .nav-menu.active {
@@ -1335,11 +1348,15 @@ img {
     .nav-toggle {
         display: flex;
         z-index: 1001;
-        background: rgba(255, 255, 255, 0.95);
+        background: transparent;
+    }
+    
+    .nav-toggle span {
+        background: var(--white);
     }
 
     .navbar.scrolled .nav-toggle {
-        background: rgba(255, 255, 255, 0.95);
+        background: transparent;
     }
 
     .nav-toggle.active span:nth-child(1) {
@@ -1392,17 +1409,31 @@ img {
         grid-template-columns: 1fr;
     }
 
+    .latest-work-scroller {
+        gap: 0;
+        padding: 0;
+    }
+
     .scroller-container {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .scroller-container::-webkit-scrollbar {
+        display: none;
     }
 
     .scroller-track {
         gap: 15px;
+        padding: 10px 15px;
     }
 
     .work-card {
-        flex: 0 0 85%;
+        flex: 0 0 280px;
+        scroll-snap-align: center;
     }
 
     .work-card img {
@@ -1469,15 +1500,24 @@ img {
 
     .navbar {
         top: 30px;
+        padding: 8px 0;
+    }
+
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .logo {
+        padding: 5px 10px;
     }
 
     .logo-icon {
-        height: 40px;
-        margin-right: 10px;
+        height: 35px;
+        margin-right: 8px;
     }
 
     .logo-text {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
 
     .hero {
@@ -1485,82 +1525,164 @@ img {
     }
 
     .hero-text h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        line-height: 1.2;
     }
 
     .tagline {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
-    .btn {
-        padding: 12px 24px;
+    .hero-description {
         font-size: 0.9rem;
     }
 
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-cta .btn {
+        width: auto;
+        min-width: 140px;
+    }
+
+    section {
+        padding: 50px 0;
+    }
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+
     .section-header h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .section-header p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
     .service-card {
-        padding: 30px 20px;
+        padding: 25px 15px;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
     }
 
     .about-mascot {
-        height: 60px;
+        height: 50px;
     }
 
     .about-title h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .about-title p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
     .feature-card {
-        padding: 25px 20px;
+        padding: 20px 15px;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
     }
 
     .experience-badge {
-        padding: 15px 20px;
+        padding: 12px 15px;
     }
 
     .experience-badge span {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .work-card {
-        flex: 0 0 90%;
+        flex: 0 0 240px;
     }
 
     .work-card img {
-        height: 220px;
+        height: 180px;
+    }
+
+    .scroll-left,
+    .scroll-right {
+        display: none;
+    }
+
+    .scroller-track {
+        padding: 10px;
     }
 
     .gallery-item img {
-        height: 220px;
+        height: 200px;
     }
 
     .portfolio-modal-content h3 {
-        font-size: 1.3rem;
-        margin-bottom: 25px;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
     }
 
     .modal-close {
-        width: 45px;
-        height: 45px;
-        font-size: 1.3rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        top: 10px;
+        right: 10px;
     }
 
     .contact-card {
-        padding: 20px;
+        padding: 15px;
+    }
+
+    .contact-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 20px 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 15px;
+        font-size: 0.9rem;
     }
 
     .footer-brand img {
-        height: 120px;
+        height: 100px;
+    }
+
+    .footer-section h4 {
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-float i {
+        font-size: 1.4rem;
     }
 }
