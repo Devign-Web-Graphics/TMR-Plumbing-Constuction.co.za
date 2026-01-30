@@ -1321,24 +1321,19 @@ img {
         background: var(--primary-blue);
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         width: 100%;
-        padding: 8px 0;
     }
 
     .navbar.scrolled {
         background: var(--primary-blue);
-        padding: 6px 0;
-    }
-
-    .navbar.scrolled .logo {
-        padding: 6px 12px;
+        padding: 5px 0;
     }
 
     .navbar.scrolled .logo-icon {
-        height: 45px;
+        height: 35px;
     }
 
     .navbar.scrolled .logo-text {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .logo {
@@ -1633,20 +1628,30 @@ img {
     }
 
     .contact-content {
-        grid-template-columns: 1fr;
         gap: 30px;
         width: 100%;
     }
 
     .contact-info {
-        gap: 20px;
+        gap: 15px;
         width: 100%;
     }
 
     .contact-card {
-        padding: 20px 15px;
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
         width: 100%;
         box-sizing: border-box;
+    }
+
+    .contact-icon {
+        margin: 0 auto;
+    }
+
+    .contact-details {
+        text-align: center;
     }
 
     .contact-card h3 {
@@ -1654,8 +1659,8 @@ img {
         margin-bottom: 8px;
     }
 
-    .contact-card p {
-        font-size: 0.9rem;
+    .social-links {
+        justify-content: center;
     }
 
     .contact-form-wrapper {
@@ -1663,27 +1668,25 @@ img {
         width: 100%;
         box-sizing: border-box;
         margin: 0;
+        border-radius: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
     }
 
     .form-group {
-        margin-bottom: 18px;
+        margin-bottom: 15px;
         width: 100%;
     }
 
     .form-group input,
+    .form-group select,
     .form-group textarea {
-        padding: 14px 16px;
-        font-size: 0.95rem;
+        padding: 14px 18px 14px 50px;
+        font-size: 1rem;
         width: 100%;
         box-sizing: border-box;
-        border: none;
-        margin: 0;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-        outline: none;
-        box-shadow: 0 0 0 2px rgba(232, 76, 61, 0.3);
     }
 
     .footer {
@@ -1957,46 +1960,30 @@ img {
     }
 
     .contact-card {
-        padding: 18px 15px;
-        width: 100%;
-        box-sizing: border-box;
+        padding: 20px 18px;
     }
 
     .contact-card h3 {
-        font-size: 1.05rem;
-        margin-bottom: 6px;
+        font-size: 1.15rem;
+        margin-bottom: 8px;
     }
 
     .contact-card p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 
     .contact-form-wrapper {
-        padding: 25px 15px;
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0;
+        padding: 28px 20px;
     }
 
     .form-group {
-        margin-bottom: 16px;
-        width: 100%;
+        margin-bottom: 18px;
     }
 
     .form-group input,
     .form-group textarea {
-        padding: 12px 14px;
-        font-size: 0.9rem;
-        width: 100%;
-        box-sizing: border-box;
-        border: none;
-        margin: 0;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-        outline: none;
-        box-shadow: 0 0 0 2px rgba(232, 76, 61, 0.3);
+        padding: 14px 16px;
+        font-size: 0.95rem;
     }
 
     .footer {
