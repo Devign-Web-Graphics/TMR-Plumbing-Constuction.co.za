@@ -335,6 +335,55 @@
                 <p>Ready to solve your plumbing problems? Contact us today!</p>
             </div>
             <div class="contact-content">
+                <div class="contact-top-row">
+                    <div class="contact-form-wrapper animate-fade-left">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Your Name" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Your Email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="form-group">
+                                <select id="service" required>
+                                    <option value="" disabled selected>Select a Service</option>
+                                    <option value="residential">Residential Plumbing</option>
+                                    <option value="commercial">Commercial Plumbing</option>
+                                    <option value="repairs">General Repairs</option>
+                                    <option value="drain">Drain Cleaning</option>
+                                    <option value="water-heater">Water Heater Services</option>
+                                    <option value="emergency">Emergency Plumbing</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                    <div class="contact-map animate-fade-left">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114348.61589664876!2d28.0338964!3d-25.975353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95619cb0a0a4a7%3A0x6b8b6b6b6b6b6b6b!2sMidrand%2C%20Gauteng%2C%20South%20Africa!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; border-radius: 15px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
                 <div class="contact-info animate-fade-right">
                     <div class="contact-card">
                         <div class="contact-icon">
@@ -371,42 +420,6 @@
                         <a href="#" class="social-link demo-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-link demo-link"><i class="fab fa-whatsapp"></i></a>
                     </div>
-                </div>
-                <div class="contact-form-wrapper animate-fade-left">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" placeholder="Your Phone Number" required>
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="form-group">
-                            <select id="service" required>
-                                <option value="" disabled selected>Select a Service</option>
-                                <option value="residential">Residential Plumbing</option>
-                                <option value="commercial">Commercial Plumbing</option>
-                                <option value="repairs">General Repairs</option>
-                                <option value="drain">Drain Cleaning</option>
-                                <option value="water-heater">Water Heater Services</option>
-                                <option value="emergency">Emergency Plumbing</option>
-                                <option value="other">Other</option>
-                            </select>
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
-                            <i class="fas fa-comment-alt"></i>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>
